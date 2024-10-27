@@ -7,4 +7,4 @@
 ## Bước 4: thêm vào quy trình CI ở trên server Git Hub
 
 ### image
-![DDT & TDD with JUnit]()
+![DDT & TDD with JUnit](https://github.com/sjsjsmsmsj/CI/blob/main/CI/images/hinhanh.png)
