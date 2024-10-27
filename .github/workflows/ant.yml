@@ -29,7 +29,7 @@ jobs: # Những công việc dev làm thường ngày: lấy code, build, chạy
           distribution: 'temurin'
      
       - name: Build project with Ant
-        run: ant -noinput -buildfile path/to/your/build.xml
+        run: ant -noinput -buildfile /Users/mac/CI/CI/build.xml
 
       
       - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
