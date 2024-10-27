@@ -20,9 +20,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: List files in workspace
-        run: ls -R
-
       - name: Build project with Ant
         run: ant -noinput -buildfile CI/build.xml
       
@@ -31,10 +28,10 @@ jobs:
 
       - name: Distribute jar-war file
         run: |
-          echo "Checking for .jar files in the following directories:"
-          ls -R  # List all files again to locate the .jar files
+          echo "Checking for .jar files in the /CI/dist directory:"
+          ls -R CI/dist  # List the contents of the dist directory
           mkdir -p staging
-          cp /path/to/your/jar/files/*.jar staging/  # Update this path based on the ls output
+          cp CI/dist/*.jar staging/  # Update this path based on the actual output directory
 
       - name: Make hyperlink to jar-war file
         uses: actions/upload-artifact@v3
