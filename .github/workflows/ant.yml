@@ -27,11 +27,15 @@ jobs:
         run: ant -noinput -buildfile CI/build.xml
       
       - name: List files after build
-        run: ls -R  # Check where the .jar files are located
+        run: ls -R  # Check for the output of the build step
 
       - name: Distribute jar-war file
-        run: mkdir staging && cp dist/*.jar staging  # Update path if necessary
-      
+        run: |
+          echo "Checking for .jar files in the following directories:"
+          ls -R  # List all files again to locate the .jar files
+          mkdir -p staging
+          cp /path/to/your/jar/files/*.jar staging/  # Update this path based on the ls output
+
       - name: Make hyperlink to jar-war file
         uses: actions/upload-artifact@v3
         with:
