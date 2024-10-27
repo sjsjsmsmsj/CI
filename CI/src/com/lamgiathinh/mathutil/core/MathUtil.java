@@ -1,0 +1,25 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.lamgiathinh.mathutil.core;
+
+/**
+ *
+ * @author mac
+ */
+public class MathUtil {
+    public static long getFactorial(int n) {
+        if (n > 20) {
+            throw new IllegalArgumentException("please n 0 -> 20");
+        }
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        int mul = 1;
+        for (int i = 2; i <= n; i ++) {
+            mul *= i;
+        }
+        return mul;
+    }
+}
