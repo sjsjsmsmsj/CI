@@ -30,6 +30,9 @@ jobs: # Những công việc dev làm thường ngày: lấy code, build, chạy
      
       - name: Build project with Ant
         run: ant -noinput -buildfile /CI/build.xml
+      - name: List files in workspace
+        run: ls -R
+
 
       
       - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
