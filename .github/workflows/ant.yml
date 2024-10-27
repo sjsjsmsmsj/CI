@@ -24,10 +24,13 @@ jobs:
         run: ls -R
 
       - name: Build project with Ant
-        run: ant -noinput -buildfile CI/build.xml # Adjusted to relative path
+        run: ant -noinput -buildfile CI/build.xml
       
+      - name: List files after build
+        run: ls -R  # Check where the .jar files are located
+
       - name: Distribute jar-war file
-        run: mkdir staging && cp dist/*.jar staging
+        run: mkdir staging && cp dist/*.jar staging  # Update path if necessary
       
       - name: Make hyperlink to jar-war file
         uses: actions/upload-artifact@v3
