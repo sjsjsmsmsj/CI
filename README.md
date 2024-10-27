@@ -5,3 +5,6 @@
 ## Bước 2: Gom về server
 ## Bước 3: sửa file build.xml thêm test ở 1204
 ## Bước 4: thêm vào quy trình CI ở trên server Git Hub
+
+### image
+![DDT & TDD with JUnit]()
